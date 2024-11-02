@@ -1,0 +1,142 @@
+
+.random-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    /* margin-bottom: 85px; */
+    border: none;
+    outline: 3px solid hsl(210, 19%, 10% , .7);
+    outline-offset: 3px;
+    background-color: hsl(210, 19%, 10% , .7);
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+}
+.random-button:active,
+.random-button:hover {
+    box-shadow:  0 0 12px 8px var(--accent);
+    outline: 2px solid #eee;
+    outline-offset: 3px;
+}
+
+/* background: conic-gradient(
+    var(--accent),
+    var(--accent) 20%,
+    var(--primary) 20%,
+    var(--primary) 40%,
+    var(--hover) 40%,
+    var(--accent) 40%,
+    var(--accent) 60%,
+    var(--hover) 60%,
+    var(--hover) 80%,
+    var(--primary) 80%);     */
+
+/* .random-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background-color: var(--background);
+    border-radius: 50%;
+    z-index: -1;
+} */
+
+/* background-color: hsla(0, 0%, 55%, 0.5); */
+/* box-shadow: inset 5px 3px 5px 0 hsl(0, 0%, 100%, .2),
+inset -5px -5px 5px 0 hsl(0, 0%, 0%, .5); */
+/* background-image: linear-gradient(to top , red  , red 40% , transparent 40% ); */
+/* place-items: center; */
+
+
+.random-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    /* color: #aaa; */
+}
+
+
+
+.random-button div span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid transparent;
+    transition: 1s ease-in-out;
+}
+
+.random-button div span.active {
+    transform: rotate(740deg);
+}
+.random-button div span svg{
+    width: 12px;
+    height: 12px;
+}
+
+
+.random-button div span.s1 {
+    color: var(--primary);
+    transition: 2s;
+}
+.random-button div span.s2 {
+    color: var(--primary);
+    transition: 1s;
+}
+
+
+.random-button div span.s3 {
+    color: var(--accent);
+    transition: 4s;
+}
+
+.random-button div span.s4 {
+    color: var(--muted);
+    transition: 6s;
+}
+
+.random-button div span.s5 {
+    color: var(--accent);
+}
+
+.random-button div span.s6 {
+    color: var(--muted);
+    transition: 4s;
+}
+.random-button div span.s7 {
+    color: var(--muted);
+}
+
+.random-button span.s2.active {
+    transform: rotate(-540deg);
+    transition: 4s;
+}
+
+
+.random-button span.s3.active {
+    transform: rotate(-340deg);
+    transition: 3s;
+}
+
+
+.random-button span.s5.active {
+    transform: rotate(-840deg);
+    transition: 5s;
+}
+
+
+.random-button span.s6.active {
+    transform: rotate(-240deg);
+    transition: 3s;
+}

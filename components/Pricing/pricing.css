@@ -1,0 +1,252 @@
+article.pricing {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: max(8rem, 5vw); ;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 8rem;
+    /* border: 1px solid var(--text); */
+}
+/* ///////////////////////////////////////////////////////// Header /////////////// */
+article.pricing .pricing-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.pricing-header::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    width: 100%;
+    height: 60%;
+    background-image: linear-gradient(to right, transparent 8%, var(--secondary) , transparent 90%);
+    /* border-radius: .5rem; */
+    opacity: .8;
+    filter: drop-shadow( 0px 2px 2px hsl(0, 0%, 0% , .4));
+
+}
+article.pricing .pricing-header h1.title {
+    position: relative;
+    background: var(--text) ;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    /* text-shadow: .1rem .1rem .1rem var(--text); */
+    opacity: .1;
+    user-select: none;
+    z-index: 2;
+}
+
+article.pricing .pricing-header .desc {
+    position: absolute;
+    bottom: -15%;
+    /* transform: translateY(-50%); */
+    color: var(--text);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: .6;
+    z-index: 2;
+}
+/* ///////////////////////////////////////////////// Content ///////////////////////// */
+article.pricing  .pricing-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    /* border: 1px solid var(--text); */
+}
+
+article.pricing .price {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(var(--size) / 3.5);
+    height: 28rem;
+    background-color: var(--background);
+    border-radius: 1rem;
+    z-index: 1;
+}
+article.pricing .price::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 4px solid var(--text);
+    opacity: .2;
+    z-index: -1;
+}
+.price h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: calc(var(--size) / 12);
+    height: calc(var(--size) / 12);
+    top: calc(var(--size) / -20);
+    left: 50%;
+    transform: translateX(-50%);
+    outline: 2px solid #000;
+    background-color: var(--background);
+    border-radius: 50%;
+    font-size: clamp(.8rem, 3vw, 1rem);
+    color: var(--text);
+    /* overflow: hidden; */
+}
+.price h3::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 5px solid var(--text);
+    outline-offset: 2px;
+    border-radius: 50%;
+    opacity: .2;
+    z-index: -1;
+}
+/* Basic */
+article.pricing .price.basic::before {
+    background: var(--primary);
+}
+
+.price.basic h3{
+    outline-color: var(--primary);
+    color: var(--primary);
+}
+.price.basic h3::before{
+    background: var(--primary);
+}
+
+/* Pro */
+article.pricing .price.pro {
+    transform: scale(1.2);
+    z-index: 2;
+    filter: drop-shadow(0px 3px 10px hsla(0, 0%, 0%, 0.4));
+
+}
+article.pricing .price.pro::before {
+    background: var(--accent);
+    background-image: linear-gradient( 45deg, var(--secondary) , var(--accent), var(--secondary) );
+
+}
+.price.pro h3{
+    outline-color: var(--accent);
+    color: var(--accent);
+}
+.price.pro h3::before{
+    background: var(--accent);
+}
+
+/* Enterprise */
+article.pricing .price.Enterprise::before {
+    background: var(--muted);
+}
+.price.Enterprise h3{
+    outline-color:  var(--muted);
+    color: var(--muted);
+}    
+.price.Enterprise h3::before{
+    background: var(--muted);
+}
+
+article.pricing .price .p1{
+    position: relative;
+    color: var(--text);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-top: 4rem;
+}
+article.pricing .price .p1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: var(--text);
+    /* border-radius: .5rem; */
+    opacity: .3;
+    z-index: -1;
+}
+article.pricing .price.basic .p1::before{
+    background-color: var(--primary);
+}
+article.pricing .price.pro .p1::before{
+    background-color: var(--accent);
+}
+article.pricing .price.Enterprise .p1::before{
+    background-color: var(--muted);
+}
+article.pricing .price h1{
+    color: var(--text);
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-top: 2rem;
+    filter: drop-shadow( 0px 3px 2px hsla(0, 0%, 0%, 0.2));
+
+}
+
+article.pricing .price .p2{
+    color: var(--text);
+    font-size:  .8rem;
+}
+article.pricing .price ul{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 2rem;
+    list-style: none;
+}
+article.pricing .price ul li{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+article.pricing .price ul li svg{
+    width: 1rem;
+    height: 1rem;
+}
+article.pricing .price ul li span{
+    color: var(--text);
+    font-size: .9rem;
+}
+article.pricing .price button{
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    color: var(--text);
+    font-weight: 700;
+    font-size: .9rem;
+    background-color: transparent;
+    border: 2px solid var(--text);
+    border-radius: .4rem;
+    transition: .3s;
+    filter: drop-shadow( 0px 2px 2px hsla(0, 0%, 0%, 0.2));
+    cursor: pointer;
+}
+/* button basic */
+article.pricing .price.basic button:hover{
+    color: var(--background);
+    background-color: var(--primary);
+    /* filter: contrast(130%); */
+}
+/* button pro */
+article.pricing .price.pro button:hover{
+    color: var(--background);
+    background-color: var(--accent);
+    /* filter: contrast(130%); */
+}
+/* button enterprise */
+article.pricing .price.Enterprise button:hover{
+    color: var(--background);
+    background-color: var(--muted);
+    /* filter: contrast(130%); */
+}

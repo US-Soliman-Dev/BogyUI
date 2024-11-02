@@ -1,0 +1,93 @@
+/* ///////////////////////////////////////////////////// Controller Bar */
+.controller {
+    position: fixed;
+    justify-content: space-between;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: calc(var(--size ) / 1.5);
+    height: calc(var(--size ) / 13);
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1rem ;
+    border-radius: 1rem;
+    z-index: 10;
+}
+
+.controller::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: rgb(110, 134, 156 , .2);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    border: 1px solid hsla(0, 0%, 0% , 0.5);
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.7);
+    z-index: -1;
+}
+
+.controller-inner{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid hsl(0, 100%, 50%); */
+}
+.shape-left {
+    position: absolute;
+    top: -34%;
+    left: 0;
+    width: 20%;
+    height: 35%;
+    border: none;
+    outline: none;
+    background-color: hsla(206, 18%, 36%);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    z-index: -1;
+    
+}
+.shape-left::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    box-shadow: -15px 15px 0 0 hsla(206, 18%, 36%);
+    border-bottom-left-radius: 1.5rem;
+    z-index: -1;
+}
+.shape-right {
+    position: absolute;
+    top: -34%;
+    right: 0;
+    width: 20%;
+    height: 35%;
+    background-color: hsla(206, 18%, 36%);
+    border-top-right-radius: 2rem ;
+    border-top-left-radius: 2rem;
+    z-index: -1;
+}
+.shape-right::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    box-shadow: 15px 15px 0 0 hsla(206, 18%, 36%);
+    border-bottom-right-radius: 1.5rem;
+    z-index: -1;
+}

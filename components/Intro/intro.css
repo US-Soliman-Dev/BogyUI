@@ -1,0 +1,78 @@
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    border: none;
+}
+
+
+.intro .intro-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.intro .intro-header .title {
+    background: linear-gradient(45deg, var(--accent), var(--primary), var(--muted));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: clamp(2rem, 2vw + 3vw, 4rem);
+    text-align: center;
+    color: var(--text);
+    letter-spacing: 3px;
+    filter: drop-shadow( 0px 10px 3px hsla(0, 0%, 0%, 0.1));
+
+}
+
+.intro .desc {
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+
+.intro .stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    filter: drop-shadow( 0px 2px 2px hsl(0, 0%, 0% , .4));
+
+}
+
+.intro .stars div {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.intro  .stars div svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.intro .stars div.star1 svg {
+    color: var(--primary);
+}
+
+.intro .stars div.star2 svg {
+    color: var(--accent);
+}
+
+.intro .stars div.star3 svg {
+    color: var(--muted);
+}

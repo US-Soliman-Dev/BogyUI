@@ -1,0 +1,190 @@
+.storedColorsList-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    color: #eee;
+    /* text-shadow: 0 2px 1px #fff; */
+    font-size: .8rem;
+    border: none;
+    outline: 3px solid hsl(210, 19%, 10%, .7);
+    outline-offset: 3px;
+    background-color: hsl(210, 19%, 10%, .7);
+    border-radius: 50%;
+    user-select: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.storedColorsList-button.active,
+.storedColorsList-button:active,
+.storedColorsList-button:hover {
+    box-shadow: 0px 0px 12px 8px var(--accent);
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+
+
+.storedColorsList-container {
+    position: fixed;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40dvw;
+    height: 30dvh;
+    color: var(--text);
+    /* background: var(--background); */
+    padding: .5rem 2.5rem .5rem 1.5rem;
+    background-color: hsla(0, 0%, 59%, 0.2);
+    backdrop-filter: blur(15px);
+    border: 3px solid hsla(0, 0%, 0%, .3);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.storedColorsList-container .title {
+    position: relative;
+    /* border: 1px solid var(--text); */
+    margin-bottom: .5rem;
+}
+
+
+.storedColorsList-colse-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: calc(100% - 1.8rem);
+    top: .3rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: transparent;
+    border: 2px solid var(--text);
+    border-radius: .3rem;
+    color: var(--text);
+    font-size: 1.3rem;
+    transition: .2s linear;
+    cursor: pointer;
+}
+.storedColorsList-colse-button:hover {
+    background: var(--text);
+    color: var(--background);
+}
+
+.colors-field {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 85%;
+    padding: 1rem .5rem .5rem;
+    /* border: 1px solid red; */
+    box-shadow: inset 0 0 5px  hsla(0, 0%, 0%, 0.4),
+    inset 0 0 15px  hsla(0, 0%, 0%, 0.3),
+    inset 0 0 25px  hsla(0, 0%, 0%, 0.2),
+    inset 0 0 35px  hsla(0, 0%, 0%, 0.1);
+    overflow-y: scroll;
+}
+.colors-field::-webkit-scrollbar {
+    width: .5vh;
+    background-color: transparent;
+} 
+.colors-field::-webkit-scrollbar-track {
+    background-color: transparent;
+    
+}
+.colors-field::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+}
+
+.colors-field .colors-box{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    width: max(90px, 100% / 10);
+    height: 3rem;
+    /* border: 1px solid var(--text); */
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+
+.colors-field .colors-box .colors-header{
+    position: relative;
+    grid-column: span 10;
+    font-size: .7rem;
+    text-align: center;
+    color: var(--text);
+    background-color: hsl(210, 19%, 10%, .3);
+    border-top-right-radius: .3rem;
+}
+.colors-field .colors-box.active .colors-header{
+    border-top-right-radius: 0;
+}
+.colors-field .colors {
+    position: relative;
+    grid-column: span 10;
+    grid-row: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 3px 5px;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    /* border: 1px solid var(--text); */
+    cursor: pointer;
+}
+
+.colors-field .colors-box.active .colors {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+}
+
+
+.colors-field .colors-box .color  {
+    position: relative;
+    width: .8rem;
+    height: 90%;
+    border-radius: .3rem;
+}
+
+.colors-field .colors-box .delete-color {
+    /* position: absolute;
+    top: -.8rem;
+    left: calc(100% - .8rem); */
+    grid-column: span 2;
+    grid-row: span 3;
+    width: .8rem;
+    /* height: .8rem; */
+    height: 100%;
+    background-color: #a8235a;
+    color: #fff;
+    font-size: .5rem;
+    border: none;
+    outline: none;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+.colors-field .colors-box .delete-color svg{
+    width: 100%;
+    height: 100%;
+    /* fill: #fff; */
+}
+
+.colors-field .colors-box.active .delete-color {
+    display: block;
+}

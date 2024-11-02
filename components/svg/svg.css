@@ -1,0 +1,63 @@
+svg {
+  position: relative;
+}
+.navbar-chape {
+  animation: move-nav 4s ease-in-out infinite;
+}
+@keyframes move-nav {
+  50% {
+    transform: translate(10px, -165px);
+  }
+}
+.message {
+  transform: translate(800px, -190px) rotateY(180deg);
+}
+/* -------------------------------- */
+.move-toggle {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation: move-plant 2.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes move-plant {
+  50% {
+    transform: translate(-190px, -140px) skew(-10deg) rotateY(15deg);
+  }
+}
+/* -------------------------------- */
+.move-toggle-sections {
+  animation: move-sections 2s ease-in-out infinite;
+}
+@keyframes move-sections {
+  50% {
+    transform: translate(-185px, -140px);
+  }
+}
+/* -------------------------------- */
+.move-toggle-ref-sections {
+  animation: move-ref-sections 2s ease-in-out infinite;
+}
+@keyframes move-ref-sections {
+  50% {
+    transform: translate(-180px, -135px);
+  }
+}
+/* -------------------------------- */
+
+.circle {
+  animation: circle 2s ease-in-out infinite alternate;
+}
+@keyframes circle {
+  50% {
+    transform: translateY(-12px)
+  }
+}
+/* -----------------------------  */
+.right-shape {
+  animation: move-right-shape 2s ease-in-out infinite alternate;
+}
+@keyframes move-right-shape {
+  50% {
+    transform: translate(-192px, -158px)
+  }
+}
+/* -----------------------------  */

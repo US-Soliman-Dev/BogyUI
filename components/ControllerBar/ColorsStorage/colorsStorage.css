@@ -1,0 +1,40 @@
+.storage-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 45px;
+    height: 45px; */
+    color: #eee;
+    /* text-shadow: 0 2px 1px #fff; */
+    font-size: 2rem;
+    border: none;
+    outline: 3px solid hsl(210, 19%, 10% , .7);
+    outline-offset: 3px;
+    background-color: hsl(210, 19%, 10% , .7);
+    border-radius: 50%;
+    user-select: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.storage-button:active,
+.storage-button:hover {
+    box-shadow:  0 0 12px 8px var(--accent);
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.storage-button.undo{
+    margin-right: 1rem;
+}
+.storage-button.redo{
+    margin-left: 1rem;
+}
+.storage-button.undo.active,
+.storage-button.redo.active {
+    outline: 2px solid hsl(210, 19%, 10% , .7);
+    box-shadow: none;
+    opacity: .4;
+    pointer-events: none;
+    cursor: default;
+}

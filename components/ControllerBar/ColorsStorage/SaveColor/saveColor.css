@@ -1,0 +1,31 @@
+.save-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding:  2px 5px;
+    color: #eee;
+    font-size: .6rem;
+    border: none;
+    background-color: hsl(210, 19%, 10% , .7);
+    border-radius: .3rem;
+    user-select: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.save-button:active,
+.save-button:hover {
+    box-shadow:  0px 0px 12px 8px var(--accent);
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+.save-button.save.active{
+    outline: 2px solid hsl(210, 19%, 10% , .7);
+    box-shadow: none;
+    opacity: .4;
+    pointer-events: none;
+    cursor: default;
+}

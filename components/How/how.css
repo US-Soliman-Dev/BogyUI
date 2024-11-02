@@ -1,0 +1,164 @@
+.how {
+    position: relative;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--text);
+    /* border: 2px solid var(--text); */
+}
+
+.how::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-image: radial-gradient(circle calc(var(--size) / 1.2) at 50% 60%, transparent, transparent, transparent, hsla(0, 0%, 100%) 97%);
+    /* background-image: radial-gradient( circle calc(var(--size) / 1.2) at 50% 40%, transparent ,  transparent,  transparent, hsla(0, 0%, 100%) 97%); */
+    /* opacity: .6; */
+    box-shadow: 0 calc(var(--size) / -70) 10px 0 hsla(0, 0%, 100%, 0.1);
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ///////////////////////////////////////////////// Header ///////////////////////// */
+.how-header {
+    position: relative;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.how-header .title {
+    font-size: clamp(2rem, 2vw + .3rem, 1.5rem);
+    font-weight: 700;
+    color: var(--text);
+    opacity: .8;
+}
+
+.how-header .title .que-mark {
+    color: var(--text);
+}
+
+/* Light mode */
+@media(prefers-color-scheme: light) {
+    .how .how-header .title .que-mark {
+        position: absolute;
+        top: calc(var(--size) / -7);
+        left: 85%;
+        color: hsla(0, 0%, 0%, 0.4);
+        font-size: calc(var(--size) / 4);
+        opacity: .5;
+        filter: drop-shadow( 3px 5px 2px hsla(0, 0%, 0%, 0.4));
+        text-shadow: 
+        5px 5px 0 var(--accent),
+        3px -3px 0 var(--muted),
+        -4px 0px 0 var(--primary)
+        ;
+    }
+}
+html[data-theme="dark"] .how .how-header .title .que-mark {
+    font-size: clamp(2rem, 2vw + .3rem, 1.5rem);
+    color: var(--text);
+    position: static;
+    opacity: 1;
+    text-shadow: none;
+}
+
+
+html[data-theme="light"] .how .how-header .title .que-mark {
+    position: absolute;
+    top: calc(var(--size) / -7);
+    left: 85%;
+    color: hsla(0, 0%, 0%, 0.4);
+    font-size: calc(var(--size) / 4);
+    opacity: .5;
+    filter: drop-shadow( 3px 5px 2px hsla(0, 0%, 0%, 0.4));
+    text-shadow: 
+    5px 5px 0 var(--accent),
+    3px -3px 0 var(--muted),
+    -4px 0px 0 var(--primary)
+    ;
+    
+}
+
+
+
+.how-header .desc {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: 65%;
+    color: var(--text);
+    opacity: .8;
+}
+
+/* ///////////////////////////////////////////////// Content ///////////////////////// */
+.how .how-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0 min(5vw + 1rem, 10rem);
+    /* border: 1px solid var(--accent); */
+}
+
+.how .how-content .how-content-color {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: max(50%, 20rem);
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+}
+
+.how .how-content .how-content-color:nth-child(2),
+.how .how-content .how-content-color:nth-child(4) {
+    align-self: flex-end;
+}
+
+.how .how-content .how-content-color:nth-child(2) .color-title,
+.how .how-content .how-content-color:nth-child(4) .color-title {
+    justify-content: flex-end;
+}
+
+.how .how-content .how-content-color:nth-child(2) span.number,
+.how .how-content .how-content-color:nth-child(4) span.number {
+    order: 2;
+}
+
+.how .how-content .how-content-color .color-title {
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    background-color: var(--secondary);
+    border-radius: 2rem;
+    gap: .5rem;
+    padding-inline: 1rem;
+    font-size: 1rem;
+    filter: drop-shadow( 0px 3px 3px hsla(0, 0%, 0%, 0.2));
+
+}
+
+.how .how-content .how-content-color span.number {
+    color: var(--text);
+    font-size: clamp(2rem, 2vw + 1rem, 3rem);
+    font-family: "Patrick Hand", cursive;
+    font-weight: 900;
+    opacity: .5;
+}
+
+.how .how-content .how-content-color p {
+    font-size: .8rem;
+}

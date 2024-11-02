@@ -1,0 +1,99 @@
+/* ////////////////////////////////////////////////////// Switch .mode  */
+
+
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    user-select: none;
+    box-shadow: inset 0 0 5px  hsla(0, 0%, 0%, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    outline: 3px solid hsl(210, 19%, 10% , .7);
+    outline-offset: 3px;
+    transition: .2s ease-in;
+}
+.switch:hover {
+    box-shadow:  0 0 12px 8px var(--accent);
+    outline: 2px solid #fff;
+}
+
+.switch .switch-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.switch .switch-inner .mode input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    appearance: none;
+    position: absolute;
+    top: 0;
+}
+
+
+.switch .mode {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    background-color: hsl(210, 19%, 10% , .7);    
+    font-size: .6rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: #eee;
+    outline: none;
+    user-select: none;
+    transform-origin: 50% -1rem;
+    transform: rotate(240deg);
+    animation: SwitchAnimateOut .5s ease-in-out forwards;
+    pointer-events: none;
+}
+
+.switch .mode.active {
+    /* color: var(--primary); */
+    /* border: 1px solid var(--primary); */
+    animation: SwitchAnimateIn .5s ease-in-out forwards alternate;
+}
+
+.switch .mode svg {
+    fill: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+        
+}
+
+
+/* ////////////////////////////////////////// */
+
+
+@keyframes SwitchAnimateIn {
+    0% {
+
+        transform: rotate(240deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes SwitchAnimateOut {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(480deg);
+    }
+}
